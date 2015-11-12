@@ -108,10 +108,10 @@
     const CGSize contentSize = self.contentSize;
     const UIEdgeInsets contentInset = self.contentInset;
     const CGSize visibleSize = self.visibleSize;
-    if (contentSize.width < visibleSize.width) {
+    if (contentSize.width <= visibleSize.width) {
         contentOffset.x = -((visibleSize.width - contentSize.width) / 2 + contentInset.left);
     }
-    if (contentSize.height < visibleSize.height) {
+    if (contentSize.height <= visibleSize.height) {
         contentOffset.y = -((visibleSize.height - contentSize.height) / 2 + contentInset.top);
     }
     return contentOffset;
